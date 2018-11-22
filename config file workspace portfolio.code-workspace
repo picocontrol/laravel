@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\CodeGorilla\\Laravel\\wishlist"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

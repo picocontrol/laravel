@@ -1,0 +1,128 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 200%;
+    background-color:#0A2B3E;
+}
+#main{
+    width: 92%;
+    height: 560px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+#logo{
+    height: 850px;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    margin-top: -50px;
+    text-align: center;
+}
+#mountainImg{
+    height: 850px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:250px;
+}
+#btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: linear-gradient(#8EFFFc,#6AF0D5);
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    box-shadow: 0 0 0 8px rgba(140,237,243,.2),0 0 0 16px rgba(140,237,243,.3);
+    cursor: pointer;
+}
+#btn img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* FULLSCREEN BACKGROUND VIDEO */
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+    .fullscreen-bg {
+        background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
+}
+
+/* Rotating square */
+.container2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: transparent;
+    vertical-align: bottom;
+  }
+  
+  .menu-button {
+    transition: fill 500ms;
+  }
+  
+  .outer-circle {
+    -webkit-transform-origin: 60px 60px;
+            transform-origin: 60px 60px;
+    transition: -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+    transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+    transition: transform 2s cubic-bezier(0.62, 0.005, 0, 1.005), -webkit-transform 2s cubic-bezier(0.62, 0.005, 0, 1.005);
+  }
+  /* button (play) gedelete*/
+  .button {
+    max-width: 12rem;
+    background: none;
+    border: 0 none;
+    font-size: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+  }
+  .button svg {
+    width: 100%;
+    height: auto;
+  }
+  .button:hover .menu-button {
+    fill: red;
+  }
+  .button:hover .outer-circle {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
